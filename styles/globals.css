@@ -1,26 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  @apply h-screen;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* cron */
+.react-js-cron {
+  @apply !flex !flex-col;
 }
 
-* {
-  box-sizing: border-box;
+.react-js-cron-field {
+  @apply !flex !flex-col !justify-start !w-full !space-y-1;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.react-js-cron-field > span {
+  @apply !text-center !w-full !text-sm;
 }
+
+.react-js-cron-select {
+  @apply !w-full;
+}
+
+.react-js-cron > div {
+  @apply !w-full !space-x-2;
+}
+
